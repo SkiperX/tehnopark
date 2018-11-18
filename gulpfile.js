@@ -67,7 +67,7 @@ gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: "./build",
-            index: "/workshop.html"
+            index: "/index.html"
 
 
         }
@@ -200,9 +200,9 @@ gulp.task('build', [
     'fonts:build',
     //'image:build',
     'png-sprite',
-    /*
+    
     'svg-sprite'
-    */
+    
     //'webp'
 ]);
 gulp.task('htmlbeautify', function() {

@@ -1,3 +1,207 @@
 .header {
     display: block;
+    &__top-line {
+        background-color: rgba(#5c70d6, 0.67);
+    }
+    &__big-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1750px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &__social {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        margin-left: auto;
+        margin-right: 18px;
+    }
+    &__language {
+        padding-top: 10px;
+        padding-bottom: 12px;
+        display: flex;
+        align-items: center;
+        color: #c8ceeb;
+        font-family: "Lato", Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+    &__item-language {
+        margin-left: 6px;
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: baseline;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 7px;
+        padding-right: 8px;
+        color: inherit;
+        text-transform: uppercase;
+        &_active {
+            background-image: linear-gradient(to right, #feae31 0%, #efe457 100%);
+            color: #362068;
+        }
+    }
+}
+
+.social {
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__icon {
+        display: block;
+        padding-left: 18px;
+        padding-right: 18px;
+       .svg-facebook {
+           width: 9px;
+           height: 17px;
+           fill: #c8ceeb;
+       }
+       .svg-vk {
+            width: 21px;
+            height: 13px;
+            fill: #c8ceeb;
+       }
+       .svg-twitter {
+            width: 17px;
+            height: 13px;
+            fill: #c8ceeb;
+       }
+       &:hover,
+       &:focus {
+           svg {
+                fill: url(#gradient);
+           }
+       }
+    }
+}
+
+.header-menu {
+    position: relative;
+    background-color: rgba(#171134, 0.92);
+    .gamburger {
+        display: none;
+    }
+    &__close-search {
+        display: none;
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1102px;
+        flex-grow: 1;
+        margin-left: auto;
+    }
+    &__item {
+        flex-grow: 1;
+        cursor: pointer;
+        &:hover {
+            .header-menu__drop-level {
+                display: block;
+            }
+            .header-menu__link {
+                background-color: #5c70d6;
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        align-items: center;
+        width: 278px;
+        height: 85px;
+        color: #ffffff;
+        font-family: "Meta Pro - Normal", Arial, sans-serif;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 19px;
+        img {
+            display: block;
+            margin-left: 5px;
+            margin-right: 12px;
+        }
+    }
+    &__drop-level {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #5c70d6;
+    }
+    &__link {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 36px;
+        padding-bottom: 33px;
+        display: block;
+        color: #ffffff;
+        text-align: center;
+        &:hover,
+        &:focus {
+            background-color: #5c70d6;
+            & + .header-menu__drop-level {
+                display: block;
+            }
+        }
+    }
+    &__form {
+        width: 254px;
+    }
+    &__search {
+        position: relative;
+        input {
+            padding: 0;
+            padding-top: 2px;
+            display: block;
+            width: 100%;
+            padding-right: 37px;
+            text-align: right;
+            background-color: transparent;
+            border: none;
+            color: #999999;
+            font-family: "Lato", Arial, sans-serif;
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 500;
+            &:focus {
+                & + .svg-loope {
+                    fill: url(#gradient);
+                }
+            }
+        }
+        .svg-loope {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 21px;
+            height: 20px;
+            fill: #adadad;
+        }
+    }
+    &__close-search {
+        position: relative;
+        width: 26px;
+        height: 26px;
+        &::after,
+        &::before {
+            content: "";
+
+            width: 36px;
+            height: 2px;
+        }
+    }
 }

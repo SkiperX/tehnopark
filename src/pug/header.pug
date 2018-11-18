@@ -1,1 +1,64 @@
-header.header 1
+header.header
+    .header__top-line
+      .header__big-container
+        .social.header__social
+          ul.social__list
+            li.social__item
+              a.social__icon.social__icon_facebook
+                .visually-hidden Фейсбук
+                +svg('facebook')
+            li.social__item
+              a.social__icon.social__icon_vk
+                .visually-hidden Вконтакте
+                +svg('vk')
+            li.social__item
+              a.social__icon.social__icon_twitter
+                .visually-hidden Твиттер
+                +svg('twitter')
+        .header__language
+          .header__text-language Выберите язык:
+          a.header__item-language(href="#") EN
+          a.header__item-language.header__item-language_active(href="#") РУС
+    
+    nav.header-menu
+      .header__big-container
+        a.header-menu__logo(href="#")
+          img(src='images/logo-header.png' height="66" width="66" alt='')
+          | Технопарк <br>
+          | высоких технологий <br>
+          | Свердловской области
+        .header-menu__row
+          .header-menu__item
+            a.header-menu__link(href="#") О технопарке
+            .header-menu__drop-level
+              .container
+                .header-menu__drop-item 
+                  a(href='#').header-menu__drop-link Миссия Технопарка
+                .header-menu__drop-item 
+                  a(href='#').header-menu__drop-link Руководство (команда)
+                .header-menu__drop-item 
+                  a(href='#').header-menu__drop-link Экспертный совет
+                .header-menu__drop-item 
+                  a(href='#').header-menu__drop-link Информация о технопарке
+          .header-menu__item
+            a.header-menu__link(href="#") Услуги технопарка
+          .header-menu__item
+            a.header-menu__link(href="#") Резиденты
+          .header-menu__item
+            a.header-menu__link(href="#") Мероприятия
+          .header-menu__item
+            a.header-menu__link(href="#") Пресс-центр
+          .header-menu__item
+            a.header-menu__link(href="#") Контакты
+        .gamburger
+          span.gamburger-line1
+          span.gamburger-line2
+          span.gamburger-line3
+        form.header-menu__form(action="")
+          .header-menu__search
+            input(type="text" placeholder="Поиск в технопарке...")
+            +svg('loope')
+          button(type="button").header-menu__close-search
+            span.visually-hidden Закрыть форму поиска
+        
+        
