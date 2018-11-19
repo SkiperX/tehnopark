@@ -1,5 +1,6 @@
 include pug/project-settings.pug
 include pug/mixins/mixins.pug
+include pug/mixins/bemto.pug
 
 doctype html
 html
@@ -15,6 +16,28 @@ html
     // векторный спрайт конец
 
     include pug/header.pug
+    +b.MAIN.page-main
+      +b.SECTION.banner(height="100vh")
+        +e.slider-list.slider-for
+          +e.slide(style="background-image: url(images/banner-slide-1.jpg); height: 100vh; ")
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, totam.
+
+          +e.slide(style="background-image: url(images/leo.jpg); height: 100vh; ")
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, veritatis.
+
+          +e.slide(style="background-image: url(images/owl.jpg); height: 100vh; ")
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, veritatis.
+
+        +e.slider-nav.slider-nav
+          +e.nav-item
+            p 1
+
+          +e.nav-item
+            p 2
+
+          +e.nav-item
+            p 3
+
                                                                                                                 
 
     include pug/footer.pug

@@ -65,3 +65,23 @@ $(".header-menu__link").hover (function(e) {
     $(".header-menu__drop-level").css("margin-left", "-" + marginLeftContainer);
     $(".header-menu__drop-level").css("margin-right", "-" + marginLeftContainer);
 });
+
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav',
+    dots: true
+});
+$('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    centerMode: true,
+    focusOnSelect: true,
+    vertical: true
+});
+
+var headerHeight = $('.header').height();
+$('.banner__slide').css('padding-top', headerHeight + 70);

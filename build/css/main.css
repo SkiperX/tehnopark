@@ -4490,6 +4490,11 @@ ul.spec-item__text-full {
 
 /*! Main / Layouts */
 .header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 888;
   display: block; }
   .header__top-line {
     background-color: rgba(92, 112, 214, 0.67); }
@@ -4842,3 +4847,23 @@ ul.spec-item__text-full {
       .header-menu__news-item_subscription svg {
         margin-top: 17px;
         margin-left: 35px; }
+
+.banner {
+  padding: 0; }
+  .banner__slide {
+    background-position: center;
+    background-size: cover; }
+  .banner__slider-nav {
+    position: absolute;
+    top: 200px;
+    left: 50%; }
+    .banner__slider-nav .slick-track {
+      width: 145px; }
+    .banner__slider-nav .slick-slide {
+      width: 145px; }
+  .banner__nav-item {
+    width: 145px;
+    flex-grow: 145px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    float: none; }
