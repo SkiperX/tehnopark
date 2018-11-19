@@ -46,3 +46,22 @@ $(".gamburger").on("click", function(e) {
     $(this).toggleClass("open"); 
     $(".header-menu__row").slideToggle(); 
 });
+$(".header-menu__search").on("click", function(e) { 
+    $(this).addClass("header-menu__search_active");
+    $(".header-menu__close-search").show();
+    if ($(".gamburger").is(':hidden')) {
+        $(".header-menu__item").hide();
+    }
+    
+});
+$(".header-menu__close-search").on("click", function(e) { 
+    $(".header-menu__search").removeClass("header-menu__search_active");
+    $(".header-menu__close-search").hide();
+    $(".header-menu__item").show();
+});
+
+$(".header-menu__link").hover (function(e) { 
+    var marginLeftContainer = $(".header__big-container").css("margin-left");
+    $(".header-menu__drop-level").css("margin-left", "-" + marginLeftContainer);
+    $(".header-menu__drop-level").css("margin-right", "-" + marginLeftContainer);
+});

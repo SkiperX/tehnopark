@@ -32,14 +32,32 @@ header.header
             a.header-menu__link(href="#") О технопарке
             .header-menu__drop-level
               .container
-                .header-menu__drop-item 
-                  a(href='#').header-menu__drop-link Миссия Технопарка
-                .header-menu__drop-item 
-                  a(href='#').header-menu__drop-link Руководство (команда)
-                .header-menu__drop-item 
-                  a(href='#').header-menu__drop-link Экспертный совет
-                .header-menu__drop-item 
-                  a(href='#').header-menu__drop-link Информация о технопарке
+                .row
+                  .col-md-3
+                    .header-menu__drop-item.header-menu__drop-item_one
+                      a(href='#').header-menu__drop-link Миссия Технопарка
+                      +svg('sub-menu-1')
+                  .col-md-3
+                    .header-menu__drop-item.header-menu__drop-item_two
+                      a(href='#').header-menu__drop-link Руководство (команда)
+                      +svg('sub-menu-2')
+                  .col-md-3
+                    .header-menu__drop-item.header-menu__drop-item_three
+                      a(href='#').header-menu__drop-link Экспертный совет
+                      +svg('sub-menu-3')
+                  .col-md-3
+                    .header-menu__drop-item.header-menu__drop-item_four
+                      a(href='#').header-menu__drop-link Информация<br>о технопарке
+                      +svg('sub-menu-4')
+              .header-menu__news
+                .container
+                  .row.justify-content-center
+                    .col-md-3
+                      a.header-menu__news-item.header-menu__news-item_document Документы
+                        +svg('folder')
+                    .col-md-3
+                      a.header-menu__news-item.header-menu__news-item_subscription Подписка на новости
+                        +svg('news')
           .header-menu__item
             a.header-menu__link(href="#") Услуги технопарка
           .header-menu__item
@@ -50,15 +68,15 @@ header.header
             a.header-menu__link(href="#") Пресс-центр
           .header-menu__item
             a.header-menu__link(href="#") Контакты
+        form.header-menu__form(action="")
+          label.header-menu__search(for="search-input")
+            input(id="search-input" type="text" placeholder="Поиск в технопарке...")
+            +svg('loope')
+          button(type="button").header-menu__close-search
+            span.visually-hidden Закрыть форму поиска
         .gamburger
           span.gamburger-line1
           span.gamburger-line2
           span.gamburger-line3
-        form.header-menu__form(action="")
-          .header-menu__search
-            input(type="text" placeholder="Поиск в технопарке...")
-            +svg('loope')
-          button(type="button").header-menu__close-search
-            span.visually-hidden Закрыть форму поиска
         
         

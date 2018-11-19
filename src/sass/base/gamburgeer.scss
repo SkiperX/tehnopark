@@ -1,7 +1,7 @@
-$gamburger-width: 22px;
-$gamburger-height: 20px;
+$gamburger-width: 42px;
+$gamburger-height: 28px;
 $gamburger-line-height: 2px;
-$gamburger-color: #102c69;
+$gamburger-color: #adb4d3;
 $gamburger-transition: 0.4s;
 
 
@@ -9,11 +9,17 @@ $gamburger-transition: 0.4s;
   font-size: 10px;
   display: inline-block;
   width: $gamburger-width;
+  flex-basis: $gamburger-width;
   height: $gamburger-height;
   transition: 1s;
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  &:active {
+    span {
+      background: linear-gradient(to right, #feae31 0%, #efe457 100%);
+    }
+  }
   @include media-breakpoint-down(sm) {
     font-size: 7px;
   }
