@@ -5204,6 +5204,7 @@ ul.spec-item__text-full {
       .about-work__tab-link_b-series .about-work__tab-content {
         left: auto; }
   .about-work__tab-content {
+    cursor: auto;
     width: calc(600% + 18px);
     text-align: left;
     display: none;
