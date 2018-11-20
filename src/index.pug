@@ -19,24 +19,42 @@ html
     +b.MAIN.page-main
       +b.SECTION.banner(height="100vh")
         +e.slider-list.slider-for
-          +e.slide(style="background-image: url(images/banner-slide-1.jpg); height: 100vh; ")
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, totam.
+          +e.slide(style="background-image: url(images/banner-slide-1.jpg)")
+            .container
+              .row
+                .col-md-6
+                  +b.about-slide
+                    +e.title-top
+                      span Технопарк
+                      | высоких технологий Свердловской области
+                    +e.title-bottom ... место где рождаются инновации 
+                    +e.wrapper-button
+                      +e.A.button-more(href="#") Узнать больше
+                      +e.A.button-video(href="#") Смотреть видео
+                        +svg('button-play')
 
-          +e.slide(style="background-image: url(images/leo.jpg); height: 100vh; ")
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, veritatis.
-
-          +e.slide(style="background-image: url(images/owl.jpg); height: 100vh; ")
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, veritatis.
-
+          +e.slide(style="background-image: url(images/banner-slide-2.jpg)")
+            .container
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, veritatis.
+          +e.slide(style="background-image: url(images/banner-slide-3.jpg)")
+            .container
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, veritatis.
+          +e.slide(style="background-image: url(images/banner-slide-4.jpg)")
+            .container
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, veritatis.
         +e.slider-nav.slider-nav
+          +e.nav-item._active
+            img(src="images/nav-slide-1.jpg", width="145" height="78" alt="")
+            .border
           +e.nav-item
-            p 1
-
+            img(src="images/nav-slide-2.jpg", width="145" height="78" alt="")
+            .border
           +e.nav-item
-            p 2
-
+            img(src="images/nav-slide-3.jpg", width="145" height="78" alt="")
+            .border
           +e.nav-item
-            p 3
+            img(src="images/nav-slide-4.jpg", width="145" height="78" alt="")
+            .border
 
                                                                                                                 
 

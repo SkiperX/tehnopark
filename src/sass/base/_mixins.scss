@@ -1,0 +1,46 @@
+@mixin button-blue {
+  position: relative;
+  padding-top: 17px;
+  padding-bottom: 19px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  background-image: linear-gradient(to right, #7451ab 0%, #6377e4 100%);
+  color: #ffffff;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 700;
+  &:hover,
+  &:focus {
+    color: #362068;
+    background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%);
+    svg {
+      fill: #362068;
+    }
+  }
+}
+
+@mixin button-yellow {
+  position: relative;
+  padding-top: 17px;
+  padding-bottom: 19px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  background-image: linear-gradient(to right, #feae31 0%, #efe457 100%);
+  color: #362068;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 700;
+  &:hover,
+  &:focus {
+    color: #362068;
+    background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%);
+  }
+}
