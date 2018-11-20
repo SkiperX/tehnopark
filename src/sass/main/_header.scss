@@ -189,6 +189,13 @@
                 }
             }
         }
+        .col-md-3:nth-child(4n) {
+            .header-menu__drop-item {
+                &::after {
+                    content: none;
+                }
+            }
+        }
     }
     &__link {
         padding-left: 10px;

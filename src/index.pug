@@ -57,6 +57,60 @@ html
             img(src="images/nav-slide-4.jpg", width="145" height="78" alt="")
             .border
 
+      +b.SECTION.about-work
+        +e.header._open
+          +svg('big-arrow')
+          span Технопарк высоких технологий Свердловской области является региональным оператором Фонда &laquo;Сколково&raquo;.
+        +e.content._active(style="display: block")
+          .container
+            +e.title Для кого мы работаем
+            +e.tab-list
+              +e.progress-bar
+                +e.progress-line
+              .row
+                .col-md-2
+                  +e.tab-link._idea Есть идея
+                    +e.icon
+                      +svg('work-1')
+                    +e.tab-content
+                      +e.tab-title Есть идея — 
+                      +e.tab-text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, maiores?
+                .col-md-2
+                  +e.tab-link._search Провожу<br>исследования
+                    +e.icon
+                      +svg('work-2')
+                    +e.tab-content
+                      +e.tab-title Провожу исследования  — 
+                      +e.tab-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat optio accusantium unde?
+                .col-md-2
+                  +e.tab-link._active._prototype Есть прототип
+                    +e.icon
+                      +svg('work-3')
+                    +e.tab-content
+                      +e.tab-title У вас есть прототип  — 
+                      +e.tab-text Поможем  с первыми внедрениями и промышленными испытаниями, а также разработаем  конструкторскую документацию и поможем организовать мелкосерийное  производство.
+                .col-md-2
+                  +e.tab-link._product Есть продукт
+                    +e.icon
+                      +svg('work-4')
+                    +e.tab-content
+                      +e.tab-title Есть продукт  — 
+                      +e.tab-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis.
+                .col-md-2
+                  +e.tab-link._s-series Произвожу<br>мелкую серию
+                    +e.icon
+                      +svg('work-5')
+                    +e.tab-content
+                      +e.tab-title Мелкая серия  — 
+                      +e.tab-text Lorem ipsum dolor sit amet.
+                .col-md-2
+                  +e.tab-link._b-series Запускаю<br>серийное<br>производство
+                    +e.icon
+                      +svg('work-6')
+                    +e.tab-content
+                      +e.tab-title Серийное производство  — 
+                      +e.tab-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellat, sequi ipsum totam voluptatum natus.
+
                                                                                                                 
 
     include pug/footer.pug

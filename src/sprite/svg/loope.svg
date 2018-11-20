@@ -23,9 +23,36 @@
 
 <svg>
     <defs>
+        <linearGradient id="workGradient">
+            <stop offset="0%" style="stop-color: #7451ab"></stop>
+            <stop offset="100%" style="stop-color: #6377e4"></stop>
+        </linearGradient>
+    </defs>
+</svg>
+
+<svg>
+    <defs>
         <linearGradient id="gradient">
             <stop offset="0%" style="stop-color: #ff8d06"></stop>
             <stop offset="100%" style="stop-color: #ffef1c"></stop>
+        </linearGradient>
+    </defs>
+</svg>
+
+<svg>
+    <defs>
+        <linearGradient id="gradientBlue" x1="0" x2="0" y1="0" y2="1">
+            <stop style="stop-color: #9faada" offset="0%"></stop>
+            <stop style="stop-color: #c8ceeb" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+</svg>
+
+<svg>
+    <defs>
+        <linearGradient id="gradientBlue2" x1="0" x2="0" y1="0" y2="1">
+            <stop style="stop-color: #6475e1" offset="0%"></stop>
+            <stop style="stop-color: #7685e4" offset="100%"></stop>
         </linearGradient>
     </defs>
 </svg>

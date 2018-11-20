@@ -76,7 +76,7 @@ $('.slider-for').slick({
     fade: true,
     dots: true,
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 4000,
     pauseOnFocus: false,
     pauseOnHover: false,
@@ -96,4 +96,17 @@ navItems.on('click', function(e) {
 $('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide){
     navItems.removeClass('banner__nav-item_active');
     $(navItems[nextSlide]).addClass('banner__nav-item_active');
+});
+
+$('.about-work__header').on('click', function(e) {
+    $('.about-work__content').toggleClass('about-work__content_active').slideToggle();
+    $(this).toggleClass('about-work__header_open');
+});
+
+var workItem = $(".about-work__tab-link");
+workItem.on('click', function(e) {
+    workItem.removeClass("about-work__tab-link_active");
+    $(this).addClass("about-work__tab-link_active");
+    var indexItem = $(this).parent().index();
+    $(".about-work__progress-line").width((20 * (indexItem)) + "%");
 });
