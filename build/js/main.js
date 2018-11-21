@@ -52,12 +52,23 @@ $(".header-menu__search").on("click", function(e) {
     if ($(".gamburger").is(':hidden')) {
         $(".header-menu__item").hide();
     }
-    
 });
-$(".header-menu__close-search").on("click", function(e) { 
+
+var closedSearch = function() {
     $(".header-menu__search").removeClass("header-menu__search_active");
     $(".header-menu__close-search").hide();
     $(".header-menu__item").show();
+}
+
+$(".header-menu__close-search").on("click", function(e) { 
+    closedSearch();
+});
+
+$(document).mouseup(function (e) { 
+    var container = $(".header-menu__search"); 
+    if (container.has(e.target).length === 0) { 
+        closedSearch();
+    } 
 });
 
 var marginLeftContainer = parseFloat($(".header__big-container").css("margin-left"));
@@ -99,8 +110,7 @@ $('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSli
 });
 
 $('.about-work__header').on('click', function(e) {
-    $('.about-work__content').toggleClass('about-work__content_active').slideToggle();
-    $(this).toggleClass('about-work__header_open');
+    // скрол ко второму экрану
 });
 
 var workItem = $(".about-work__tab-link");
