@@ -4940,6 +4940,7 @@ ul.spec-item__text-full {
     line-height: 1; }
 
 .footer-top__title {
+  cursor: pointer;
   padding-left: 9px;
   display: inline-block;
   position: relative;
@@ -4951,6 +4952,8 @@ ul.spec-item__text-full {
   padding-top: 21px;
   padding-bottom: 8px;
   padding-right: 27px; }
+  .footer-top__title:hover {
+    color: #ffcf48; }
   .footer-top__title::after {
     content: "";
     position: absolute;
