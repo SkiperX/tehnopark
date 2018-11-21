@@ -110,7 +110,13 @@ $('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSli
 });
 
 $('.about-work__header').on('click', function(e) {
-    // скрол ко второму экрану
+    scrollHeight = $(window).height();
+    $('html, body').animate({ scrollTop: scrollHeight - 30}, 500); 
+});
+
+$('.footer-top__title').on('click', function(e) {
+    $(".headlines").slideToggle();  
+    $(this).toggleClass('footer-top__title_close');
 });
 
 var workItem = $(".about-work__tab-link");

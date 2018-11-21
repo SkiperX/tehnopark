@@ -472,7 +472,28 @@
     padding-bottom: 118px;
   }
   &__wrapper-nav {
+    position: relative;
     margin-bottom: 42px;
+    border-bottom: 1px solid #d8e0f7;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 1px;
+      width: 16px;
+      height: 16px;
+      border-bottom: 1px solid #d8e0f7;
+      border-left: 1px solid #d8e0f7;
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      left: auto;
+      right: 1px;
+      transform: rotate(-135deg);
+    }
     .nav{
       margin-top: 0;
     }
@@ -492,7 +513,7 @@
       padding-right: 9px;
       padding-top: 6px;
       margin-top: 31px;
-      padding-bottom: 12px;
+      padding-bottom: 11px;
       overflow: visible;
       &::after {
         content: "";
@@ -722,6 +743,7 @@
 
 .news {
   padding: 0;
+  padding-bottom: 122px;
   &__title {
     padding-top: 118px;
     padding-bottom: 47px;

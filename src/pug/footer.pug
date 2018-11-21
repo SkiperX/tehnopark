@@ -1,4 +1,127 @@
-footer.footer 2
+footer.footer
+  .footer-top
+    .container
+      .row
+        .col-6
+          .footer-top__title Разделы нашего сайта
+        .col-6
+          .social.footer-top__social
+              ul.social__list
+                li.social__item
+                  a.social__icon.social__icon_facebook
+                    .visually-hidden Фейсбук
+                    +svg('facebook')
+                li.social__item
+                  a.social__icon.social__icon_vk
+                    .visually-hidden Вконтакте
+                    +svg('vk')
+                li.social__item
+                  a.social__icon.social__icon_twitter
+                    .visually-hidden Твиттер
+                    +svg('twitter')
+    .headlines
+      .container
+        .row.justify-content-between
+          .col-md-2
+            .headlines__list
+              .headlines__list-title О технопарке
+              ul
+                li 
+                  a(href="#") Команда
+                li 
+                  a(href="#") Вакансии
+                li 
+                  a(href="#") Инфраструктура
+                li 
+                  a(href="#") Экскурсия по технопарку
+                li 
+                  a(href="#") Экспертный совет
+
+
+          .col-md-2
+            .headlines__list
+              .headlines__list-title Услуги технопарка
+              ul
+                li 
+                  a(href="#") Инжиниринговый центр
+                li
+                  a(href="#") Региональный центр поддержки инноваций
+                li 
+                  a(href="#") Сервисный центр
+                li 
+                  a(href="#") Бизнес-инкубатор
+                li 
+                  a(href="#") Коворкинг
+                li 
+                  a(href="#") Региональный оператор Сколково
+
+          .col-md-2
+            .headlines__list
+              .headlines__list-title Резиденты
+              ul
+                li 
+                  a(href="#") Список резидентов
+                li 
+                  a(href="#") Как стать резидентом
+
+
+          .col-md-2
+            .headlines__list
+              .headlines__list-title Мероприятия
+              ul
+                li 
+                  a(href="#") Календарь мероприятий
+                li 
+                  a(href="#") Условия проведения мероприятий
+
+          .col-md-2
+            .headlines__list
+              .headlines__list-title Пресс центр
+              ul
+                li 
+                  a(href="#") Новости
+                li 
+                  a(href="#") Статьи
+                li 
+                  a(href="#") Фотогалерея
+                li 
+                  a(href="#") Видео
+                li 
+                  a(href="#") СМИ о Технопарке
+
+    .footer-bottom
+      .container
+        .row
+          .col-md-3
+            a.footer-bottom__logo(href="#")
+              img(src='images/logo-header.png' height="66" width="66" alt='')
+              | Технопарк <br>
+              | высоких технологий <br>
+              | Свердловской области
+
+          .col-md-9
+            ul.footer-bottom__list
+              li
+                a(href="#") О нас
+              li
+                a(href="#") СМИ
+              li
+                a(href="#") Найди себя в Технопарке
+              li
+                a(href="#") Инфраструктура  
+              li
+                a(href="#") Обратная связь
+
+        .row
+          .col-md-6
+            ul.footer-bottom__contacts
+              li.local-icon Екатеринбург, Конструкторов 5
+              li.phone-icon <a href="tel"> +7 (343) 229-01-00 </a> (многоканальный)
+              li.mail-icon <a href="mailto:info@uralhitech.ru">info@uralhitech.ru </a>
+
+          .col-md-6
+            span.footer-bottom__copyright © 2016-2018
+    
  
 
 include scripts.pug

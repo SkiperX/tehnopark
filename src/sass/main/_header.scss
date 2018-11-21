@@ -71,20 +71,20 @@
         display: block;
         padding-left: 18px;
         padding-right: 18px;
+        svg {
+            fill: #c8ceeb;
+        }
        .svg-facebook {
            width: 9px;
            height: 17px;
-           fill: #c8ceeb;
        }
        .svg-vk {
             width: 21px;
             height: 13px;
-            fill: #c8ceeb;
        }
        .svg-twitter {
             width: 17px;
             height: 13px;
-            fill: #c8ceeb;
        }
        &:hover,
        &:focus {
