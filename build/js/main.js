@@ -126,3 +126,12 @@ workItem.on('click', function(e) {
     var indexItem = $(this).parent().index();
     $(".about-work__progress-line").width((20 * (indexItem)) + "%");
 });
+
+if (screen.width <= 991) {
+    console.log(screen.width);
+    $('.header-menu__link').on('click', function(e) {
+        $(this).next(".header-menu__drop-level").slideToggle();
+        $(this).toggleClass('header-menu__link_active');
+    });
+}
+

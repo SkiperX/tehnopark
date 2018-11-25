@@ -3,7 +3,7 @@
     left: 0;
     right: 0;
     top: 0;
-    z-index: 888;
+    z-index: 1000;
     display: block;
     &__top-line {
         background-color: rgba(#5c70d6, 0.67);
@@ -112,25 +112,31 @@
         max-width: 1102px;
         flex-basis: 1102px;
         flex-grow: 1;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: -15px;
+        margin-right: -15px;
         height: 100%;
         @include media-breakpoint-down(md) { 
             display: none;
             order: 2;
             width: 100%;
         }
+        @include media-breakpoint-down(lg) { 
+            margin-right: 0;
+            margin-left: -20px;
+        }
     }
     &__item {
         flex-grow: 1;
         flex-shrink: 1;
         cursor: pointer;
-        &:hover {
-            .header-menu__drop-level {
-                display: block;
-            }
-            .header-menu__link {
-                background-color: #5c70d6;
+        @include media-breakpoint-up(lg) { 
+            &:hover {
+                .header-menu__drop-level {
+                    display: block;
+                }
+                .header-menu__link {
+                    background-color: #5c70d6;
+                }
             }
         }
     }
@@ -196,6 +202,11 @@
                 }
             }
         }
+        @include media-breakpoint-down(md) { 
+            position: relative;
+            // background-image: none;
+            // background-color: rgba(#5c70d6, 0.8);
+        }
     }
     &__link {
         padding-left: 10px;
@@ -207,13 +218,20 @@
         text-align: center;
         height: 100%;
         font-size: rem(16);
-        &:hover,
-        &:focus {
+        // @include media-breakpoint-up(xl) {
+        //     &:hover,
+        //     &:focus {
+        //         background-color: #5c70d6;
+        //         & + .header-menu__drop-level {
+        //             display: block;
+        //         }
+        //     }
+        // }
+        &_active {
             background-color: #5c70d6;
-            & + .header-menu__drop-level {
-                display: block;
-            }
+            color: #efe457;
         }
+        
         @include media-breakpoint-down(lg) { 
             font-size: 15px;
             line-height: 15px;
@@ -433,7 +451,14 @@
                 margin-left: -33px;
             }
         }
-        
+        @include media-breakpoint-down(md) { 
+            svg {
+                display: none;
+            }
+            br {
+                display: none;
+            }
+        }
     }
     &__drop-link {
         position: relative;
@@ -457,6 +482,9 @@
         &:hover + svg,
         &:focus + svg {
             fill: url(#gradient);
+        }
+        @include media-breakpoint-down(md) { 
+            padding-top: 41px;
         }
     }
     .row > *:not(:last-child) {

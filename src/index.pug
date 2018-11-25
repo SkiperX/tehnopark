@@ -23,7 +23,7 @@ html
           +e.slide(style="background-image: url(images/banner-slide-1.jpg)")
             .container
               .row
-                .col-md-6
+                .col-lg-6.col-md-8
                   +b.about-slide
                     +e.title-top
                       span Технопарк
@@ -77,10 +77,10 @@ html
                       img(src="images/work-1.png", alt="" width="23" height="32")
                     +e.tab-content
                       .row
-                        .col-md-4
+                        .col-sm-4
                           +e.tab-image
                             img(src="images/prototype.png", width="112" height="93" alt="")
-                        .col-md-8
+                        .col-sm-8
                           +e.tab-title У вас есть идея  — 
                           +e.tab-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, numquam.
                 .col-md-2
@@ -89,10 +89,10 @@ html
                       img(src="images/work-2.png", alt="" width="25" height="33")
                     +e.tab-content
                       .row
-                        .col-md-4
+                        .col-sm-4
                           +e.tab-image
                             img(src="images/prototype.png", width="112" height="93" alt="")
-                        .col-md-8
+                        .col-sm-8
                           +e.tab-title Провожу исследования  — 
                           +e.tab-text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis obcaecati rem, dolores necessitatibus optio similique?
                 .col-md-2
@@ -101,10 +101,10 @@ html
                       img(src="images/work-3.png", alt="" width="28" height="23")
                     +e.tab-content
                       .row
-                        .col-md-4
+                        .col-sm-4
                           +e.tab-image
                             img(src="images/prototype.png", width="112" height="93" alt="")
-                        .col-md-8
+                        .col-sm-8
                           +e.tab-title У вас есть прототип  — 
                           +e.tab-text Поможем  с первыми внедрениями и промышленными испытаниями, а также разработаем  конструкторскую документацию и поможем организовать мелкосерийное  производство.
                 .col-md-2
@@ -113,10 +113,10 @@ html
                       img(src="images/work-4.png", alt="" width="21" height="30")
                     +e.tab-content
                       .row
-                        .col-md-4
+                        .col-sm-4
                           +e.tab-image
                             img(src="images/prototype.png", width="112" height="93" alt="")
-                        .col-md-8
+                        .col-sm-8
                           +e.tab-title У вас есть продукт  — 
                           +e.tab-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore necessitatibus rem dolores aspernatur reiciendis natus? Quis quidem sed asperiores dolorum! Modi odio quibusdam, officia ullam ab enim sit saepe beatae?
                 .col-md-2
@@ -125,10 +125,10 @@ html
                       img(src="images/work-5.png", alt="" width="33" height="33")
                     +e.tab-content
                       .row
-                        .col-md-4
+                        .col-sm-4
                           +e.tab-image
                             img(src="images/prototype.png", width="112" height="93" alt="")
-                        .col-md-8
+                        .col-sm-8
                           +e.tab-title Произвожу мелкую серию  — 
                           +e.tab-text Lorem ipsum dolor sit amet consectetur adipisicing.
                 .col-md-2
@@ -137,10 +137,10 @@ html
                       img(src="images/work-6.png", alt="" width="32" height="32")
                     +e.tab-content
                       .row
-                        .col-md-4
+                        .col-sm-4
                           +e.tab-image
                             img(src="images/prototype.png", width="112" height="93" alt="")
-                        .col-md-8
+                        .col-sm-8
                           +e.tab-title Запускаю серийное производство  — 
                           +e.tab-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quas quis! Molestias.
 
@@ -149,21 +149,21 @@ html
           +e.preface Технопарк высоких технологий Свердловской области
           +e.title Услуги и компетенции
           +e.wrapper-nav
-            ul.nav.nav-tabs.row.justify-content-center(role="tablist")
-              li.nav-item.col-3
+            ul.nav.nav-tabs.row.justify-content-lg-center.justify-content-around(role="tablist")
+              li.nav-item.col-lg-3.col-4
                 a.nav-link.active(data-toggle='tab', href='#services1', role='tab') Специализированные
                   img(src="images/services-1.png", width="38" height="36" alt="")
-              li.nav-item.col-3
+              li.nav-item.col-lg-3.col-4
                 a.nav-link(data-toggle='tab', href='#services2', role='tab') Организационные
                   img(src="images/services-2.png", width="41" height="30" alt="")
-              li.nav-item.col-3
+              li.nav-item.col-lg-3.col-4
                 a.nav-link(data-toggle='tab', href='#services3', role='tab') Консультационные
                   img(src="images/services-3.png", width="31" height="31" alt="")
 
           .tab-content
             .tab-pane.fade.active.show#services1(role="tabpanel")
               .row
-                .col-md-6.mb-0
+                .col-md-6.mb-md-0
                   +e.item
                     +e.item-image
                       img(src="", alt="")
@@ -175,7 +175,7 @@ html
                 .col-md-6
                   +e.item
                     +e.item-image
-                      img(src="images/services-center.png", width="365" height="235" alt="")
+                      img(src="images/services-center.png" alt="")
                     +e.item-title Центр поддержки инноваций
                     +e.item-description Региональный центр поддержки инноваций является элементом инновационной инфраструктуры Свердловской области и осуществляет свою деятельность в интересах инновационных предприятий и организаций региона, а также региональных институтов развития и инновационных территориальных кластеров.
                     +e.wrap-button
@@ -190,14 +190,14 @@ html
       +b.SECTION.developments
         .container
           .row
-            .col-md-6
+            .col-lg-6
               +e.welcome
                 +e.title Календарь<br>мероприятий
                 +e.text
                   p В Технопарке постоянно проводятся мероприятия различной направленности.
                   p Узнайте больше о предстоящих событиях!
                 +e.A.button Узнать об условиях проведения мероприятий
-            .col-md-6
+            .col-lg-6
               +b.soon
                 +e.title Ближайшие события
                 +e.list
