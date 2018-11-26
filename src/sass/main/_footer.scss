@@ -1,9 +1,34 @@
 .footer {
+  position: relative;
   color: #ffffff;
   background-color: #171134;
   background-image: url("../images/footer-background.jpg");
   background-size: 180px;
   background-position: bottom;
+  &__up {
+    position: absolute;
+    top: -120px;
+    right: 11.3%;
+    width: 53px;
+    height: 62px;
+    svg {
+      width: 53px;
+      height: 62px;
+      fill: url(#workGradient);
+    }
+    &:hover,
+    &:focus {
+      svg {
+        fill: url(#gradient);
+      }
+    }
+    @include media-breakpoint-down(md) { 
+      top: -97px;
+    }
+    @include media-breakpoint-down(sm) { 
+      display: none;
+    }
+  }
 }
 
 .headlines {
@@ -93,10 +118,19 @@
       margin-right: 0;
     }
   }
+  .social__icon {
+    @include media-breakpoint-down(sm) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 }
 
 .footer-bottom {
   padding-top: 38px;
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+  }
   &__logo {
     display: flex;
     flex-grow: 0;
@@ -142,10 +176,6 @@
     margin-right: -31px;
     margin-left: -30px;
     margin-top: 39px;
-    @include media-breakpoint-down(sm) {
-      margin-left: 0;
-      margin-right: 0;
-    }
     li {
       position: relative;
       padding-left: 30px;
@@ -175,6 +205,21 @@
       &:hover,
       &:focus {
         color: #5a6dd2;
+      }
+    }
+    @include media-breakpoint-down(lg) { 
+      margin-top: 0;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+      margin-right: 0;
+      justify-content: flex-start;
+      li {
+        padding-left: 0;
+        padding-right: 61px;
+        &::after {
+          right: 30px;
+        }
       }
     }
   }

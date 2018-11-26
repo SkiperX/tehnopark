@@ -24,9 +24,10 @@ header.header
       .header__big-container
         a.header-menu__logo(href="#")
           img(src='images/logo-header.png' height="66" width="66" alt='')
-          | Технопарк <br>
-          | высоких технологий <br>
-          | Свердловской области
+          span
+            | Технопарк <br>
+            | высоких технологий <br>
+            | Свердловской области
         .header-menu__row
           .header-menu__item
             a.header-menu__link(href="#") О технопарке
@@ -52,10 +53,10 @@ header.header
               .header-menu__news
                 .container
                   .row.justify-content-center
-                    .col-6.col-lg-3
+                    .col-sm-6.col-lg-3
                       a.header-menu__news-item.header-menu__news-item_document Документы
                         +svg('folder')
-                    .col-6.col-lg-3
+                    .col-sm-6.col-lg-3
                       a.header-menu__news-item.header-menu__news-item_subscription Подписка на новости
                         +svg('news')
           .header-menu__item

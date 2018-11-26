@@ -39,6 +39,11 @@
           transition: 4000ms linear;
         }
       }
+      @include media-breakpoint-down(sm) {
+        li {
+          width: 50px;
+        }
+      }
     }
   }
 
@@ -46,6 +51,9 @@
     background-position: center;
     background-size: cover;
     height: 976px;
+    @include media-breakpoint-down(sm) {
+      height: 800px;
+    }
   }
 
   &__slider-nav {
@@ -111,6 +119,10 @@
   flex-grow: 0;
   flex-shrink: 0;
   margin-right: -35px;
+  @include media-breakpoint-down(sm) {
+    margin-top: 20px;
+    margin-right: 0;
+  }
   &__title-top {
     padding-top: 6px;
     padding-bottom: 25px;
@@ -153,11 +165,15 @@
     @include media-breakpoint-down(sm) {
       margin-left: 0;
       width: 100%;
+      flex-basis: 100%;
     }
   }
   &__wrapper-button {
     width: 100%;
     margin-top: 165px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 75px;
+    }
   }
   &__button-more {
     @include button-yellow;
@@ -216,9 +232,6 @@
     line-height: rem(26);
     font-family: "Lato", Arial, sans-serif;
     font-weight: 700;
-    @include media-breakpoint-down(sm) { 
-      margin-left: 10%;
-    }
     span {
       display: block;
       max-width: 900px;
@@ -240,6 +253,20 @@
 
       path.a2 {
         animation-delay:0s;
+      }
+    }
+    @include media-breakpoint-down(sm) { 
+      margin-left: 10%;
+    }
+    @include media-breakpoint-down(xs) { 
+      margin-left: 0;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      top: -30px;
+      padding-left: 90px;
+      svg {
+        top: 17px;
+        left: 24px;
       }
     }
     &:hover {
@@ -607,6 +634,9 @@
           display: none;
         }
       }
+      @include media-breakpoint-down(sm) {
+        word-wrap: break-word;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -737,6 +767,9 @@
       padding-top: 50px;
       padding-bottom: 30px;
       min-height: 300px;
+    }
+    @include media-breakpoint-down(sm) { 
+      padding-left: 0;
     }
     &::after {
       @include media-breakpoint-down(md) { 

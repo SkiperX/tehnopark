@@ -26,6 +26,9 @@
         padding-bottom: 13px;
         margin-left: auto;
         margin-right: 18px;
+        @include media-breakpoint-down(sm) {
+            margin: 0;
+        }
     }
     &__language {
         padding-top: 10px;
@@ -37,6 +40,11 @@
         font-size: 13px;
         font-weight: 400;
         line-height: 1.2;
+    }
+    &__text-language {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
     &__item-language {
         margin-left: 6px;
@@ -172,6 +180,12 @@
             width: 228px;
             font-size: 16px;
             line-height: 16px;
+        }
+        @include media-breakpoint-down(md) { 
+            width: 70px;
+            span {
+                display: none;
+            }
         }
     }
     &__drop-level {
@@ -369,6 +383,14 @@
             }
             @include media-breakpoint-down(md) { 
                 right: 119px;
+                left: 80px;
+                input {
+                    padding-left: 10px;
+                    padding-right: 50px;
+                }
+                .svg-loope {
+                    right: 12px;
+                }
             }
         }
     }
@@ -534,6 +556,15 @@
             svg {
                 margin-top: 17px;
                 margin-left: 35px;
+            }
+        }
+        @include media-breakpoint-down(sm) { 
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            padding-left: 50px;
+            svg {
+                margin-left: 5px;
             }
         }
     }
