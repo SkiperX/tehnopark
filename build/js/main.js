@@ -123,15 +123,22 @@ var workItem = $(".about-work__tab-link");
 workItem.on('click', function(e) {
     workItem.removeClass("about-work__tab-link_active");
     $(this).addClass("about-work__tab-link_active");
+    if (screen.width <= 767) {
+        $('.about-work__tab-link').children(".about-work__tab-content").css('min-height', 0);
+        $('.about-work__tab-link').children(".about-work__tab-content").slideUp();
+        $(this).children(".about-work__tab-content").slideToggle();
+    } else {
+        $('.about-work__tab-link').children(".about-work__tab-content").hide();
+        $(this).children(".about-work__tab-content").show();
+    }
+    
     var indexItem = $(this).parent().index();
     $(".about-work__progress-line").width((20 * (indexItem)) + "%");
 });
 
 if (screen.width <= 991) {
-    console.log(screen.width);
     $('.header-menu__link').on('click', function(e) {
         $(this).next(".header-menu__drop-level").slideToggle();
         $(this).toggleClass('header-menu__link_active');
     });
 }
-

@@ -89,6 +89,9 @@
     svg {
       fill: #484fa4;
     }
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -139,6 +142,10 @@
     margin-right: -31px;
     margin-left: -30px;
     margin-top: 39px;
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+      margin-right: 0;
+    }
     li {
       position: relative;
       padding-left: 30px;
