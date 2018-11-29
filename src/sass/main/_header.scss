@@ -382,7 +382,7 @@
                 fill: url(#gradient);
             }
             @include media-breakpoint-down(md) { 
-                right: 119px;
+                right: 60px;
                 left: 80px;
                 input {
                     padding-left: 10px;
@@ -428,6 +428,7 @@
         }
         @include media-breakpoint-down(md) { 
             right: 76px;
+            right: 14px;
         }
     }
     &__drop-item {

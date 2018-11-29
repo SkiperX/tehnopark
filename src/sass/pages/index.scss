@@ -13,7 +13,9 @@
       margin: 0;
       padding: 0;
       padding-left: 2px;
-
+      @include media-breakpoint-down(sm) {
+        bottom: 50px;
+      }
       li {
         vertical-align: top;
         width: 76px;
@@ -52,7 +54,8 @@
     background-size: cover;
     height: 976px;
     @include media-breakpoint-down(sm) {
-      height: 800px;
+      min-height: 400px;
+      height: 100vh;
     }
   }
 
@@ -172,7 +175,7 @@
     width: 100%;
     margin-top: 165px;
     @include media-breakpoint-down(sm) {
-      margin-top: 75px;
+      margin-top: 30px;
     }
   }
   &__button-more {
@@ -180,11 +183,13 @@
     padding-left: 52px;
     padding-right: 63px;
     margin-right: 14px;
+    margin-bottom: 20px;
   }
   &__button-video {
     @include button-blue;
     padding-left: 70px;
     padding-right: 34px;
+    margin-bottom: 20px;
     svg {
       position: absolute;
       width: 29px;
@@ -256,7 +261,9 @@
       }
     }
     @include media-breakpoint-down(sm) { 
-      margin-left: 10%;
+      margin-left: 0;
+      display: block;
+      position: static;
     }
     @include media-breakpoint-down(xs) { 
       margin-left: 0;
@@ -947,6 +954,7 @@
   }
 
   &__item {
+    display: block;
     cursor: pointer;
     position: relative;
     height: 300px;
@@ -955,6 +963,7 @@
       transition: all 0.5s ease-in-out;
     }
     .news__image {
+      display: block;
       img {
         @include media-breakpoint-down(lg) { 
           height: 100%;

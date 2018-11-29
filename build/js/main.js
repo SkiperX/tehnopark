@@ -51,6 +51,10 @@ $(".header-menu__search").on("click", function(e) {
     $(".header-menu__close-search").show();
     if ($(".gamburger").is(':hidden')) {
         $(".header-menu__item").hide();
+    } else {
+        $(".gamburger").hide();
+        $(".gamburger").removeClass("open");
+        $(".header-menu__row").slideUp(); 
     }
 });
 
@@ -58,6 +62,7 @@ var closedSearch = function() {
     $(".header-menu__search").removeClass("header-menu__search_active");
     $(".header-menu__close-search").hide();
     $(".header-menu__item").show();
+    $(".gamburger").show();
 }
 
 $(".header-menu__close-search").on("click", function(e) { 
@@ -137,7 +142,7 @@ if (screen.width <= 991) {
     });
 }
 
-$('.footer__up ').click(function (e) {
+$('.footer__up').click(function (e) {
     e.preventDefault();
     $('body,html').animate({
         scrollTop: 0
