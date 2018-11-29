@@ -62,7 +62,9 @@ var closedSearch = function() {
     $(".header-menu__search").removeClass("header-menu__search_active");
     $(".header-menu__close-search").hide();
     $(".header-menu__item").show();
-    $(".gamburger").show();
+    if( window.screen.width <= 991 ){
+        $(".gamburger").show();
+    }
 }
 
 $(".header-menu__close-search").on("click", function(e) { 
