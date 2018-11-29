@@ -70,8 +70,8 @@ header.header
           .header-menu__item
             a.header-menu__link(href="#") Контакты
         form.header-menu__form(action="")
-          label.header-menu__search(for="search-input")
-            input(id="search-input" type="text" placeholder="Поиск в технопарке...")
+          label.header-menu__search
+            input(type="text" placeholder="Поиск в технопарке...") 
             +svg('loope')
           button(type="button").header-menu__close-search
             span.visually-hidden Закрыть форму поиска
