@@ -88,6 +88,9 @@ $(".banner__slider-nav").css("margin-right", marginLeftContainer + 15);
 
 var headerHeight = $('.header').height();
 $('.banner__slide').css('padding-top', headerHeight + 70);
+if ($(window).width() <= '991'){
+    $('.banner__slide').css('padding-top', headerHeight + 10);
+}
 
 var navItems = $('.banner__nav-item');
 
