@@ -161,9 +161,9 @@ workItem.on('click', function(e) {
     workItem.removeClass("about-work__tab-link_active");
     $(this).addClass("about-work__tab-link_active");
     var indexItem = $(this).parent().index();
-    $('.about-work__tab-content').fadeOut(300);
+    $('.about-work__tab-content').fadeOut(400);
     $(".about-work__progress-line").width((20 * (indexItem)) + "%");
-    $(this).children('.about-work__tab-content').fadeIn(300);
+    $(this).children('.about-work__tab-content').fadeIn(400);
     console.log($(this).children('.about-work__tab-content'))
 });
 
