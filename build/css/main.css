@@ -5241,6 +5241,7 @@ ul.spec-item__text-full {
   .banner__slide {
     background-position: center;
     background-size: cover;
+    background: transparent;
     height: 976px; }
     @media (max-width: 767px) {
       .banner__slide {
