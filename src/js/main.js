@@ -129,8 +129,7 @@ $( document ).ready(function() {
         autoplay: true,
         autoplaySpeed: 4000,
         pauseOnFocus: false,
-        pauseOnHover: false,
-        draggable: false
+        pauseOnHover: false
     });
     parallaxMirror.fadeOut(0);
     $(parallaxMirror[navItems.length - 1]).fadeIn(300);

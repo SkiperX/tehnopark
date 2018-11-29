@@ -6111,9 +6111,10 @@ ul.spec-item__text-full {
     background-color: #ffffff;
     margin-bottom: 21px;
     display: flex;
-    transition: 0.3s; }
+    transition: 0.3s;
+    cursor: pointer; }
     .soon__item:hover {
-      box-shadow: 0 -1px 9px rgba(0, 0, 0, 0.4); }
+      box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1); }
   .soon__image {
     margin-top: 26px;
     margin-bottom: 22px;
