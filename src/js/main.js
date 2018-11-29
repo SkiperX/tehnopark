@@ -118,8 +118,6 @@ $( document ).ready(function() {
     });
 });
 
-navItems.length;
-
 $('.about-work__header').on('click', function(e) {
     scrollHeight = $(window).height();
     $('html, body').animate({ scrollTop: scrollHeight - 30}, 500); 
