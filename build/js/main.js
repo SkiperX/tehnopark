@@ -155,11 +155,15 @@ $('.footer-top__title').on('click', function(e) {
 });
 
 var workItem = $(".about-work__tab-link");
+$(".about-work__tab-link_active .about-work__tab-content").show();
 workItem.on('click', function(e) {
+    $('.about-work__tab-content').hide(0);
     workItem.removeClass("about-work__tab-link_active");
     $(this).addClass("about-work__tab-link_active");
     var indexItem = $(this).parent().index();
     $(".about-work__progress-line").width((20 * (indexItem)) + "%");
+    $(this).children('.about-work__tab-content').show(400);
+    console.log($(this).children('.about-work__tab-content'))
 });
 
 $(".footer__up").on('click', function() {
