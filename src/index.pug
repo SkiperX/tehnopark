@@ -31,7 +31,7 @@ html
                     +e.title-bottom ... место где рождаются инновации 
                     +e.wrapper-button
                       +e.A.button-more(href="#") Узнать больше
-                      +e.A.button-video(href="#") Смотреть видео
+                      +e.A.button-video(href="#" data-toggle="modal" data-target="#videoSlide") Смотреть видео
                         +svg('button-play')
 
           +e.slide(style="background-image: transparent" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="/images/banner-slide-2.jpg")
@@ -303,6 +303,17 @@ html
                   </div>
                 </a>
           +e.A.button Все новости
+
+      <div class="modal fade" id="videoSlide" tabindex="-1" role="dialog" aria-labelledby="videoSlide" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wndllXoH9cI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
                                                                                                                 
 
     include pug/footer.pug
