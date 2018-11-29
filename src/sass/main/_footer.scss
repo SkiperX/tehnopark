@@ -34,6 +34,7 @@
 }
 
 .headlines {
+  display: none;
   padding-bottom: 22px;
   background-color: #232150;
   &__list {
@@ -93,18 +94,19 @@
       content: "";
       position: absolute;
       right: 0;
-      top: 27px;
-     
+      top: 21px;
+      
       width: 10px;
       height: 10px;
       border-top: 3px solid #ffcf48;
       border-left: 3px solid #ffcf48;
-      transform: rotate(45deg);
+      transform: rotate(-135deg);
+      transition: 0.5s;
     }
     &_close {
       &::after {
-        top: 21px;
-        transform: rotate(-135deg);
+        top: 27px;
+        transform: rotate(45deg);
       }
     }
   }

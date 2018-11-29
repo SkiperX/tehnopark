@@ -555,6 +555,11 @@
   }
 }
 
+@keyframes slideDown {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
 .services {
   padding: 0;
   &__preface {
@@ -583,6 +588,10 @@
     @include media-breakpoint-down(md) { 
       padding-bottom: 50px;
     }
+  }
+
+  .tab-pane.active {
+    animation: slideDown 0.3s linear;   
   }
   &__wrapper-nav {
     position: relative;
@@ -679,6 +688,10 @@
     padding-right: 20px;
     padding-bottom: 43px;
     height: 100%;
+    transition: 0.2s;
+    &:hover {
+      box-shadow: 0 -1px 9px rgba(0, 0, 0, 0.4);
+    }
     @include media-breakpoint-down(lg) { 
       padding-left: 15px;
       padding-right: 15px;
@@ -851,6 +864,9 @@
     background-color: #ffffff;
     margin-bottom: 21px;
     display: flex;
+    &:hover {
+      box-shadow: 0 -1px 9px rgba(0, 0, 0, 0.4);
+    }
   }
   &__image {
     margin-top: 26px;

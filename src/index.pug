@@ -31,7 +31,7 @@ html
                     +e.title-bottom ... место где рождаются инновации 
                     +e.wrapper-button
                       +e.A.button-more(href="#") Узнать больше
-                      +e.A.button-video(href="#" data-toggle="modal" data-target="#videoSlide") Смотреть видео
+                      +e.A.button-video(href="#" data-toggle="modal" data-target="#video-modal") Смотреть видео
                         +svg('button-play')
 
           +e.slide(style="background-image: transparent" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="/images/banner-slide-2.jpg")
@@ -45,7 +45,7 @@ html
                     +e.title-bottom ... место где рождаются инновации 
                     +e.wrapper-button
                       +e.A.button-more(href="#") Узнать больше
-                      +e.A.button-video(href="#" data-toggle="modal" data-target="#videoSlide") Смотреть видео
+                      +e.A.button-video(href="#" data-toggle="modal" data-target="#video-modal") Смотреть видео
                         +svg('button-play')
           +e.slide(style="background-image: transparent" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="/images/banner-slide-3.jpg")
             .container
@@ -58,7 +58,7 @@ html
                     +e.title-bottom ... место где рождаются инновации 
                     +e.wrapper-button
                       +e.A.button-more(href="#") Узнать больше
-                      +e.A.button-video(href="#" data-toggle="modal" data-target="#videoSlide") Смотреть видео
+                      +e.A.button-video(href="#" data-toggle="modal" data-target="#video-modal") Смотреть видео
                         +svg('button-play')
           +e.slide(style="background-image: transparent" data-parallax="scroll" data-bleed="10" data-speed="0.2" data-image-src="/images/banner-slide-4.jpg")
             .container
@@ -71,7 +71,7 @@ html
                     +e.title-bottom ... место где рождаются инновации 
                     +e.wrapper-button
                       +e.A.button-more(href="#") Узнать больше
-                      +e.A.button-video(href="#" data-toggle="modal" data-target="#videoSlide") Смотреть видео
+                      +e.A.button-video(href="#" data-toggle="modal" data-target="#video-modal") Смотреть видео
                         +svg('button-play')
         +e.slider-nav.slider-nav
           +e.nav-item._active
@@ -342,12 +342,12 @@ html
                 </a>
           +e.A.button Все новости
 
-      <div class="modal modal-video fade" id="videoSlide" tabindex="-1" role="dialog" aria-labelledby="videoSlide" aria-hidden="true">
+      <div class="modal modal-video fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="video-modal" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <a type="button" class="close" data-dismiss="modal" aria-label="Close">
             </a>
-            <iframe width="560" height="600" src="https://www.youtube.com/embed/wndllXoH9cI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="600" data-src="https://www.youtube.com/embed/wndllXoH9cI?showinfo=0&amp;autoplay=1&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
