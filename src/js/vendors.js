@@ -21,4 +21,3 @@
 // ../../node_modules/selectric/public/jquery.selectric.min.js
 // ../../node_modules/jscrollpane/script/jquery.jscrollpane.js
 // ../../node_modules/jscrollpane/script/jquery.mousewheel.js
-// ../../node_modules/parallax-js/src/parallax.js

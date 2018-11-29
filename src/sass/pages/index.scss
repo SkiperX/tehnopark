@@ -52,7 +52,6 @@
   &__slide {
     background-position: center;
     background-size: cover;
-    background: transparent;
     height: 976px;
     @include media-breakpoint-down(sm) {
       min-height: 400px;

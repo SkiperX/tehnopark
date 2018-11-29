@@ -9,7 +9,6 @@ if (document.fonts) {
 
 $(window).load(function() {
     $("body").css("opacity", "1");
-
 });
 
 //превращает кнопку в лоадер
@@ -80,20 +79,6 @@ $(".header-menu__link").hover (function(e) {
 
 $(".banner__slider-nav").css("margin-right", marginLeftContainer + 15);
 
-$('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    draggable: false
-});
-
 var headerHeight = $('.header').height();
 $('.banner__slide').css('padding-top', headerHeight + 70);
 
@@ -103,11 +88,37 @@ navItems.on('click', function(e) {
     var indexSlide = $(this).index();
     $('.slider-for').slick('slickGoTo', indexSlide,  false);
 });
-
-$('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    navItems.removeClass('banner__nav-item_active');
-    $(navItems[nextSlide]).addClass('banner__nav-item_active');
+var parallaxMirror;
+$( document ).ready(function() {
+    
+    parallaxMirror = $('.parallax-mirror');
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        draggable: false
+    });
+    parallaxMirror.fadeOut(0);
+    $(parallaxMirror[navItems.length - 1]).fadeIn(300);
+    $('.slider-for').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        navItems.removeClass('banner__nav-item_active');
+        $(navItems[nextSlide]).addClass('banner__nav-item_active');
+        parallaxMirror.css('zIndex', '-100')
+        parallaxMirror.fadeOut(300);
+        $(parallaxMirror[navItems.length - nextSlide - 1]).css('zIndex', '-50');
+        $(parallaxMirror[navItems.length - nextSlide - 1]).fadeIn(300);
+        console.log(navItems.length - nextSlide - 1)
+    });
 });
+
+navItems.length;
 
 $('.about-work__header').on('click', function(e) {
     scrollHeight = $(window).height();
@@ -126,3 +137,4 @@ workItem.on('click', function(e) {
     var indexItem = $(this).parent().index();
     $(".about-work__progress-line").width((20 * (indexItem)) + "%");
 });
+
