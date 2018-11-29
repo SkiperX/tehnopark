@@ -270,6 +270,12 @@
             flex-grow: 0;
         }
     }
+    @keyframes searchAnimat {
+        from {left: calc(100% - 200px)}
+    }
+    @keyframes searchAnimat2 {
+        from {left: calc(100% - 100px)}
+    }
     &__search {
         display: block;
         position: relative;
@@ -277,6 +283,7 @@
         margin-bottom: 20px;
         padding-right: 37px;
         min-height: 42px;
+        
         @include media-breakpoint-down(lg) { 
             padding: 0;
         }
@@ -353,6 +360,10 @@
             right: 70px;
             left: 312px;
             top: 0;
+            animation: searchAnimat 0.5s;
+            @include media-breakpoint-down(sm) { 
+                animation: searchAnimat2 0.3s;
+            }
             input {
                 display: block;
                 text-align: left;

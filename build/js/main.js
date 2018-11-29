@@ -102,7 +102,12 @@ $('.slider-for').slick({
 });
 
 var headerHeight = $('.header').height();
-$('.banner__slide').css('padding-top', headerHeight + 70);
+if( window.screen.width > 500 ){
+    $('.banner__slide').css('padding-top', headerHeight + 70);
+} else {
+    $('.banner__slide').css('padding-top', headerHeight + 10);
+}
+
 
 var navItems = $('.banner__nav-item');
 

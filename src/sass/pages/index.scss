@@ -14,7 +14,7 @@
       padding: 0;
       padding-left: 2px;
       @include media-breakpoint-down(sm) {
-        bottom: 50px;
+        bottom: 19px;
       }
       li {
         vertical-align: top;
@@ -304,7 +304,7 @@
     @include media-breakpoint-down(sm) { 
       height: auto;
       padding-bottom: 30px;
-      padding-top: 64px;
+      padding-top: 0;
     }
   }
   &__title {
