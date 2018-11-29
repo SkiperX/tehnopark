@@ -4984,11 +4984,13 @@ ul.spec-item__text-full {
     z-index: 1111;
     right: 11.3%;
     width: 53px;
-    height: 62px; }
+    height: 62px;
+    transition: 0.3s; }
     .footer__up svg {
       width: 53px;
       height: 62px;
-      fill: url(#workGradient); }
+      fill: url(#workGradient);
+      transition: fill 0.3s; }
     .footer__up:hover svg, .footer__up:focus svg {
       fill: url(#gradient); }
     @media (max-width: 991px) {
@@ -5353,6 +5355,7 @@ ul.spec-item__text-full {
     display: inline-block;
     vertical-align: middle;
     border: none;
+    background-color: transparent;
     background-image: linear-gradient(to right, #feae31 0%, #efe457 100%);
     color: #362068;
     font-family: "Lato", Arial, sans-serif;
@@ -5364,9 +5367,28 @@ ul.spec-item__text-full {
     padding-right: 63px;
     margin-right: 14px;
     margin-bottom: 20px; }
+    .about-slide__button-more::before {
+      z-index: 1;
+      transition: 0.3s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 1px;
+      bottom: 0;
+      background-color: #ffef1c;
+      background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%);
+      background-size: contain;
+      opacity: 0; }
+    .about-slide__button-more span {
+      position: relative;
+      z-index: 2; }
+    .about-slide__button-more svg {
+      z-index: 2; }
     .about-slide__button-more:hover, .about-slide__button-more:focus {
-      color: #362068;
-      background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%); }
+      color: #362068; }
+      .about-slide__button-more:hover::before, .about-slide__button-more:focus::before {
+        opacity: 1; }
   .about-slide__button-video {
     position: relative;
     padding-top: 17px;
@@ -5386,9 +5408,26 @@ ul.spec-item__text-full {
     padding-left: 70px;
     padding-right: 34px;
     margin-bottom: 20px; }
+    .about-slide__button-video::before {
+      z-index: 1;
+      transition: 0.3s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%);
+      opacity: 0; }
+    .about-slide__button-video span {
+      position: relative;
+      z-index: 2; }
+    .about-slide__button-video svg {
+      z-index: 2; }
     .about-slide__button-video:hover, .about-slide__button-video:focus {
-      color: #362068;
-      background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%); }
+      color: #362068; }
+      .about-slide__button-video:hover::before, .about-slide__button-video:focus::before {
+        opacity: 1; }
       .about-slide__button-video:hover svg, .about-slide__button-video:focus svg {
         fill: #362068; }
     .about-slide__button-video svg {
@@ -5902,9 +5941,26 @@ ul.spec-item__text-full {
     margin-top: auto;
     padding-left: 29px;
     padding-right: 71px; }
+    .services__button::before {
+      z-index: 1;
+      transition: 0.3s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%);
+      opacity: 0; }
+    .services__button span {
+      position: relative;
+      z-index: 2; }
+    .services__button svg {
+      z-index: 2; }
     .services__button:hover, .services__button:focus {
-      color: #362068;
-      background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%); }
+      color: #362068; }
+      .services__button:hover::before, .services__button:focus::before {
+        opacity: 1; }
       .services__button:hover svg, .services__button:focus svg {
         fill: #362068; }
     .services__button svg {
@@ -5995,6 +6051,7 @@ ul.spec-item__text-full {
     display: inline-block;
     vertical-align: middle;
     border: none;
+    background-color: transparent;
     background-image: linear-gradient(to right, #feae31 0%, #efe457 100%);
     color: #362068;
     font-family: "Lato", Arial, sans-serif;
@@ -6009,9 +6066,28 @@ ul.spec-item__text-full {
     line-height: 1;
     padding-left: 36px;
     padding-right: 40px; }
+    .developments__button::before {
+      z-index: 1;
+      transition: 0.3s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 1px;
+      bottom: 0;
+      background-color: #ffef1c;
+      background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%);
+      background-size: contain;
+      opacity: 0; }
+    .developments__button span {
+      position: relative;
+      z-index: 2; }
+    .developments__button svg {
+      z-index: 2; }
     .developments__button:hover, .developments__button:focus {
-      color: #362068;
-      background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%); }
+      color: #362068; }
+      .developments__button:hover::before, .developments__button:focus::before {
+        opacity: 1; }
 
 .soon {
   padding: 0;
@@ -6034,7 +6110,8 @@ ul.spec-item__text-full {
     padding-left: 25px;
     background-color: #ffffff;
     margin-bottom: 21px;
-    display: flex; }
+    display: flex;
+    transition: 0.3s; }
     .soon__item:hover {
       box-shadow: 0 -1px 9px rgba(0, 0, 0, 0.4); }
   .soon__image {
@@ -6239,9 +6316,26 @@ ul.spec-item__text-full {
     padding-left: 0;
     padding-right: 0;
     margin-top: 34px; }
+    .news__button::before {
+      z-index: 1;
+      transition: 0.3s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%);
+      opacity: 0; }
+    .news__button span {
+      position: relative;
+      z-index: 2; }
+    .news__button svg {
+      z-index: 2; }
     .news__button:hover, .news__button:focus {
-      color: #362068;
-      background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%); }
+      color: #362068; }
+      .news__button:hover::before, .news__button:focus::before {
+        opacity: 1; }
       .news__button:hover svg, .news__button:focus svg {
         fill: #362068; }
 

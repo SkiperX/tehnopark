@@ -14,14 +14,36 @@
   line-height: 1;
   font-weight: 700;
   transition: 0.3s;
+  &::before {
+    z-index: 1;
+    transition: 0.3s;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%);
+    opacity: 0;
+  }
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  svg {
+    z-index: 2;
+  }
   &:hover,
   &:focus {
     color: #362068;
-    background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%);
+    &::before {
+      opacity: 1;
+    }
     svg {
       fill: #362068;
     }
   }
+
 }
 
 @mixin button-yellow {
@@ -33,6 +55,7 @@
   display: inline-block;
   vertical-align: middle;
   border: none;
+  background-color: transparent;
   background-image: linear-gradient(to right, #feae31 0%, #efe457 100%);
   color: #362068;
   font-family: "Lato", Arial, sans-serif;
@@ -40,9 +63,32 @@
   line-height: 1;
   font-weight: 700;
   transition: 0.3s;
+  &::before {
+    z-index: 1;
+    transition: 0.3s;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 1px;
+    bottom: 0;
+    background-color: #ffef1c;
+    background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%);
+    background-size: contain;
+    opacity: 0;
+  }
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  svg {
+    z-index: 2;
+  }
   &:hover,
   &:focus {
     color: #362068;
-    background-image: linear-gradient(to right, #ff8d06 0%, #ffef1c 100%);
+    &::before {
+      opacity: 1;
+    }
   }
 }

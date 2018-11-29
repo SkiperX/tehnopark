@@ -864,6 +864,7 @@
     background-color: #ffffff;
     margin-bottom: 21px;
     display: flex;
+    transition: 0.3s;
     &:hover {
       box-shadow: 0 -1px 9px rgba(0, 0, 0, 0.4);
     }

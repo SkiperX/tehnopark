@@ -13,10 +13,12 @@
     right: 11.3%;
     width: 53px;
     height: 62px;
+    transition: 0.3s;
     svg {
       width: 53px;
       height: 62px;
       fill: url(#workGradient);
+      transition: fill 0.3s;
     }
     &:hover,
     &:focus {
