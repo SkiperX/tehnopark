@@ -1119,3 +1119,17 @@
     max-height: 70vh;
   }
 }
+
+.fixed-header {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  right: 0;
+  -webkit-transition: .6s;
+  transition: .6s;
+  z-index: 1500;
+
+  &.sticky {
+    top: 0;
+}
+}

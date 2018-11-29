@@ -145,3 +145,20 @@ workItem.on('click', function(e) {
     var indexItem = $(this).parent().index();
     $(".about-work__progress-line").width((20 * (indexItem)) + "%");
 });
+
+if (($("body").width() > 991) && ($(window).height() > 650)) {
+    $("body").prepend($(".header").clone().addClass("fixed-header"));
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 600) {
+            $(".fixed-header").addClass("sticky");
+            // $(".blog-right, .--sticky-col, .product-right, .cart-col").addClass("header-fix");
+            $(".footer__up").fadeIn();
+
+        } else {
+            $(".fixed-header").removeClass("sticky");
+            // $(".blog-right, .--sticky-col, .product-right, .cart-col").removeClass("header-fix");
+            $(".footer__up").fadeOut();
+
+        }
+    })
+}

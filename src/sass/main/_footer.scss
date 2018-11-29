@@ -6,6 +6,7 @@
   background-size: 180px;
   background-position: bottom;
   &__up {
+    display: none;
     position: fixed;
     bottom: 100px;
     z-index: 1111;
