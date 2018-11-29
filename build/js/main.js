@@ -141,7 +141,6 @@ $( document ).ready(function() {
         parallaxMirror.fadeOut(300);
         $(parallaxMirror[navItems.length - nextSlide - 1]).css('zIndex', '-50');
         $(parallaxMirror[navItems.length - nextSlide - 1]).fadeIn(300);
-        console.log(navItems.length - nextSlide - 1)
     });
 });
 
@@ -161,4 +160,9 @@ workItem.on('click', function(e) {
     $(this).addClass("about-work__tab-link_active");
     var indexItem = $(this).parent().index();
     $(".about-work__progress-line").width((20 * (indexItem)) + "%");
+});
+
+$(".footer__up").on('click', function() {
+    $("html:not(:animated),body:not(:animated)").animate({scrollTop: 0}, 600);
+    return false;
 });
